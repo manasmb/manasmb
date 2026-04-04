@@ -1,4 +1,63 @@
-// ── Typing animation ─────────────────────────────────────────────────
+// ── Lenis smooth scroll ───────────────────────────────────────────────
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smooth: true,
+});
+
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+gsap.ticker.lagSmoothing(0);
+
+// ── GSAP setup ────────────────────────────────────────────────────────
+gsap.registerPlugin(ScrollTrigger);
+
+// ── Projects: horizontal parallax rows ───────────────────────────────
+gsap.fromTo('.projects-row-1',
+  { x: 90 },
+  {
+    x: -90,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#projects',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1.8,
+    }
+  }
+);
+
+gsap.fromTo('.projects-row-2',
+  { x: -90 },
+  {
+    x: 90,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#projects',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1.8,
+    }
+  }
+);
+
+// ── Projects title: word reveal ───────────────────────────────────────
+gsap.from('.projects-title .title-word', {
+  y: '110%',
+  opacity: 0,
+  stagger: 0.12,
+  duration: 0.85,
+  ease: 'power3.out',
+  scrollTrigger: {
+    trigger: '.projects-title',
+    start: 'top 88%',
+  }
+});
+
+// ── Typing animation ──────────────────────────────────────────────────
 const roles = [
   'Android Applications',
   'Data Pipelines',
@@ -34,9 +93,9 @@ type();
 
 // ── Navbar scroll effect ──────────────────────────────────────────────
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
-  updateActiveLink();
+lenis.on('scroll', ({ scroll }) => {
+  navbar.classList.toggle('scrolled', scroll > 40);
+  updateActiveLink(scroll);
 });
 
 // ── Mobile burger ─────────────────────────────────────────────────────
@@ -49,8 +108,8 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 // ── Active nav link ───────────────────────────────────────────────────
 const sections = document.querySelectorAll('section[id]');
-function updateActiveLink() {
-  const y = window.scrollY + 120;
+function updateActiveLink(scrollY = window.scrollY) {
+  const y = scrollY + 120;
   sections.forEach(sec => {
     const top = sec.offsetTop, bottom = top + sec.offsetHeight;
     const link = document.querySelector(`.nav-links a[href="#${sec.id}"]`);
@@ -58,7 +117,7 @@ function updateActiveLink() {
   });
 }
 
-// ── Scroll reveal ─────────────────────────────────────────────────────
+// ── Scroll reveal (IntersectionObserver) ─────────────────────────────
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -97,13 +156,13 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.stats-section').forEach(el => counterObserver.observe(el));
 
-// ── Smooth scroll for anchor links ────────────────────────────────────
+// ── Smooth scroll for anchor links (via Lenis) ────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      lenis.scrollTo(target, { offset: -80, duration: 1.4 });
     }
   });
 });

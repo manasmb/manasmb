@@ -276,10 +276,17 @@
 <section id="projects" class="section section-alt">
   <div class="container">
     <p class="section-label">04. Projects</p>
-    <h2 class="section-title">Things I've Built</h2>
-    <div class="projects-grid">
+    <h2 class="section-title projects-title">
+      <span class="title-word">Things</span> <span class="title-word">I've</span> <span class="title-word">Built</span>
+    </h2>
+  </div>
 
-      <div class="project-card reveal featured">
+  <div class="projects-rows">
+
+    <!-- Row 1 — drifts left on scroll -->
+    <div class="projects-row projects-row-1">
+
+      <div class="project-card featured">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links">
@@ -294,7 +301,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links">
@@ -308,7 +315,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links">
@@ -322,7 +329,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links">
@@ -336,7 +343,12 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+    </div><!-- /row-1 -->
+
+    <!-- Row 2 — drifts right on scroll -->
+    <div class="projects-row projects-row-2">
+
+      <div class="project-card">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links">
@@ -350,7 +362,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links"></div>
@@ -362,7 +374,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
         <div class="project-top">
           <i class="fa fa-folder-open project-icon"></i>
           <div class="project-links"></div>
@@ -374,8 +386,9 @@
         </div>
       </div>
 
-    </div>
-  </div>
+    </div><!-- /row-2 -->
+
+  </div><!-- /projects-rows -->
 </section>
 
 <!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
@@ -522,6 +535,9 @@
   <p class="footer-sub">© 2024 · All rights reserved</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
