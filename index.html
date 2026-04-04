@@ -1,330 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manas M Bhat — Software Engineer</title>
+  <link rel="icon" href="images/logo.png">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="main.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-  <div class="nav-header">
-    <div class="header-links">
-      <ul class="headerholder">
-        <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
-          <li data-menuanchor="thirdPage"><a href="#portfolio">RESEARCH</a></li>
-          <li data-menuanchor="thirdPage"><a href="#education">EDUCATION</a></li>
-        <li data-menuanchor="thirdPage"><a href="#projects">PROJECTS</a></li>
-          <li data-menuanchor="secondPage"><a href="#skills">SKILLS</a></li>
-        <li data-menuanchor="secondPage"><a href="#experience">EXPERIENCE</a></li>
-        <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
-      </ul>
+<!-- ── NAV ──────────────────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home">mb<span class="accent">.</span></a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────────────────── -->
+<section id="home" class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content reveal">
+    <p class="hero-greeting">Hi, I'm</p>
+    <h1 class="hero-name">Manas M<span class="accent"> Bhat</span></h1>
+    <p class="hero-role">
+      I build&nbsp;<span class="typed-wrap"><span class="typed" id="typed"></span><span class="cursor">|</span></span>
+    </p>
+    <p class="hero-tagline">
+      MS Information Systems <span class="dim">@</span> University of Maryland &nbsp;·&nbsp;
+      Ex-Accenture Data Analyst &nbsp;·&nbsp; Android &amp; Web Developer
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <a href="#projects" class="btn-secondary">View My Work</a>
     </div>
   </div>
+  <a href="#about" class="scroll-down">
+    <span>scroll</span>
+    <i class="fa fa-chevron-down"></i>
+  </a>
+</section>
 
+<!-- ── STATS ─────────────────────────────────────────────────────────── -->
+<section id="stats" class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-icon"><i class="fa fa-download"></i></div>
+        <div class="stat-body">
+          <p class="stat-num"><span class="counter" data-target="10">0</span>K+</p>
+          <p class="stat-label">App Downloads</p>
+        </div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon"><i class="fa fa-mobile-alt"></i></div>
+        <div class="stat-body">
+          <p class="stat-num"><span class="counter" data-target="5">0</span>+</p>
+          <p class="stat-label">Apps Shipped</p>
+        </div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon"><i class="fa fa-book-open"></i></div>
+        <div class="stat-body">
+          <p class="stat-num"><span class="counter" data-target="6">0</span></p>
+          <p class="stat-label">Research Papers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div>
-    <section id="about" class="aboutContent">
+<!-- ── ABOUT ─────────────────────────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container">
+    <p class="section-label">01. About me</p>
+    <h2 class="section-title">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a software engineer and data professional with a passion for building things that people actually use.
+          Currently pursuing a <strong>Master of Science in Information Systems</strong> at the University of Maryland
+          (GPA: 3.88/4.0), and a <strong>Teaching Assistant</strong> at the Robert H. Smith School of Business.
+        </p>
+        <p>
+          Before grad school I spent nearly four years at <strong>Accenture</strong> as a Data Analyst,
+          where I worked on everything from SQL-driven revenue analytics to Tableau dashboards and SAP automation
+          that touched millions of customers.
+        </p>
+        <p>
+          Outside work I ship Android apps — my most popular,
+          <a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.timetable3" target="_blank" class="inline-link">The Mechanical App</a>,
+          has crossed <strong>10,000 downloads</strong> on the Play Store.
+          I've also published research in peer-reviewed engineering journals.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">Android</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+      </div>
+      <div class="about-avatar reveal">
+        <div class="avatar-ring">
+          <div class="avatar-inner">MMB</div>
+        </div>
+        <div class="avatar-card">
+          <code class="mono">
+            <span class="kw">const</span> manas = {<br>
+            &nbsp; role: <span class="str">"Engineer"</span>,<br>
+            &nbsp; location: <span class="str">"Miami, FL"</span>,<br>
+            &nbsp; available: <span class="bool">true</span><br>
+            }
+          </code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="aboutme" data-anchor="aboutme">
-            <div class="opaque-bg animated fadeInDown">
-              <p style="color:#FF6363">Hi there, I'm</p>
-              <h1 style="color:white">Manas<span style="color:#FF6363"> M </span>Bhat</h1>
-              <p>
-                I am currently pursuing masters in Information Systems at the University of Maryland.<br>
-                I am an Android/Web developer with 3.5 years of experience as a
-                Data Analyst, currently working as a Teaching assistant at the Robert H Smith School of Business
-              </p>
-              <a id="submit" class="btn btn-lg" href="resume.pdf">Download Resume</a>
+<!-- ── EXPERIENCE ─────────────────────────────────────────────────────── -->
+<section id="experience" class="section section-alt">
+  <div class="container">
+    <p class="section-label">02. Career</p>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tcard-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Kaseya_Limited.svg" alt="Kaseya" class="tcard-logo">
+            <div>
+              <h3 class="tcard-org">Kaseya</h3>
+              <p class="tcard-meta">Data Analyst &nbsp;·&nbsp; Miami, FL &nbsp;·&nbsp; <span class="tcard-date">Nov 2024 – Present</span></p>
             </div>
-        </div>
-    </section>
-
-    <hr class="line">
-
-    <section id="experience">
-        <div class="experience" data-anchor="projects">
-             <div>
-                <p class="sectionTitles">Work Experience</p>
-             </div>
-
-            <div class="work-row">
-                <div class="divWorkImg">
-                    <img class="workimg" src="images/rhsmithlogo.jpg" alt="">
-                </div>
-
-                 <div class="divWorkText">
-                     <h3 class="WorkPlaceName">Robert H. Smith School of Business <p class="location">College Park, MD, United States</p></h3>
-                     <p class="positionText">Teaching Assistant</p><p class="date">January 2023 - Present</p>
-                     <p class="JobDesc">
-                        • Enhanced and guided students in understanding the concepts of Web development using Flask framework in Python.<br>
-                        • Assisted in performing feasibility analysis to evaluate information systems configurations, implementing system development and project management methodologies to an industry project and in developing a functional information system prototype.<br>
-                        • Evaluated student assignments to grade them based on performance, offer constructive feedback, and promote best practices.
-                     </p>
-                 </div>
-            </div>
-
-            <hr class="blueline">
-
-             <div class="work-row">
-                <div class="divWorkImg">
-                    <img class="workimg" src="images/accLogo.png" alt="">
-                </div>
-
-                 <div class="divWorkText">
-                     <h3 class="WorkPlaceName">Accenture <p class="location">Bengaluru, India</p></h3>
-                     <p class="positionText">Data Analyst</p> <p class="date">November 2018 - July 2022</p>
-                     <p class="JobDesc">
-                        • Designed and developed an application to summarize and assess customer spending pattern of over 12 million customers using python and oracle database.<br>
-                        • Examined and mined data from SQL databases for analysis and provided necessary recommendations to leadership, reducing $3.2M in revenue leakage.<br>
-                        • Collaborated with the Strategy and Audit department to develop a rich and dynamic dashboard using Tableau for tracking transactional data, resulting in 28% increase in marketing efficiency.<br>
-                        • Led a team responsible for monitoring key financial metrics, communicating reliable data-driven insights to stakeholders and ensuring the smooth launch of 18 products globally.<br>
-                        • Analyzed key metrics to meet business requirements while automating over 750 SAP scenarios across different functional areas, reducing human effort by 84%.<br>
-                        • Proposed and assisted in deploying a new interactive dashboard, while training and imparting knowledge to the leads of different teams.
-                     </p>
-                 </div>
-            </div>
-
-            <hr class="blueline">
-
-            <div class="work-row">
-                <div class="divWorkImg">
-                    <img class="workimg" src="images/maubanklogo.jpg" alt="">
-                </div>
-
-                 <div class="divWorkText">
-                     <h3 class="WorkPlaceName">MauBank<p class="location">Ebene, Mauritius</p></h3>
-                     <p class="positionText">IT Applications Intern</p> <p class="date">August 2018 - September 2022</p>
-                     <p class="JobDesc">
-                        • Analyzed and Visualized data using python to identify key profitable areas for the bank by collaborating with financial and technical SMEs.<br>
-                        • Implemented prototypes, pilot applications, and A/B testing to improve user experience and maximize product efficiency, increasing it by 32%.<br>
-                        • Built machine learning model using Random Forest algorithm, having accuracy of 92% to predict possibility of loan turning into Non-Performing Asset.
-                     </p>
-                 </div>
-            </div>
-
-
-
-        </div>
-    </section>
-
-    <hr class="line">
-
-    <section id="skills">
-        <div class="skills" data-anchor="projects">
-             <div>
-                <p class="sectionTitles">My Skills</p>
-             </div>
-
-            <h3 class="sectionSubHeadings">Languages:</h3>
-
-            <i class="devicon-c-plain icon"></i>
-            <i class="devicon-java-plain-wordmark icon"></i>
-            <i class="icon devicon-python-plain-wordmark" ></i>
-            <i class="icon devicon-r-original" ></i>
-            <i class="icon devicon-css3-plain-wordmark" ></i>
-            <i class="icon devicon-html5-plain-wordmark" ></i>
-            <i class="icon devicon-javascript-plain" ></i>
-
-            <h3 class="sectionSubHeadings">Tools:</h3>
-
-            <i class="icon devicon-rstudio-plain"></i>
-            <i class="icon devicon-androidstudio-plain"></i>
-            <i class="icon devicon-microsoftsqlserver-plain-wordmark" ></i>
-            <i class="icon devicon-pycharm-plain-wordmark" ></i>
-            <i class="icon devicon-firebase-plain" ></i>
-            <i class="icon devicon-github-original-wordmark" ></i>
-            <i class="icon devicon-jupyter-plain-wordmark" ></i>
-
-            <h3 class="sectionSubHeadings">Frameworks:</h3>
-
-            <i class="devicon-numpy-original-wordmark icon"></i>
-            <i class="devicon-pandas-original-wordmark icon"></i>
-            <i class="icon devicon-flask-plain-wordmark" ></i>
-            <i class="icon devicon-flask-bootstrap-plain" ></i>
-
-
-        </div>
-    </section>
-
-    <hr class="line">
-
-    <section id="projects">
-        <div class="projects" data-anchor="projects">
-             <div>
-                <p class="sectionTitles">Projects</p>
-             </div>
-
-            <div class="skill-row">
-
-          <h3 class="skilltitle">Maryland Traffic Violation Analysis</h3>
-          <p>Analyzed traffic violations that occurred in Maryland, to help the local Police Department keep the roads safer. The data was acquired from Kaggle and covered violations from 2012 to 2018, with over 1.8 million violations recorded. Used various Python libraries like numpy, pandas, and matplotlib to answer specific questions and provide useful insights</p>
-
-          <hr class="redline">
-          <h3 class="skilltitle">The Mechanical App</h3>
-          <p>Developed a Java-based android application, to help students of Mechanical Engineering access notes and keep a track of their classes. This app was well received by students across different universities in Karnataka and has been
-            downloaded by over 10K users.</p>
-          <p>
-            Link to the app: <em><a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.timetable3&hl=en_IN&gl=US">Tap here</a></em>
-          </p>
-          <hr class="redline">
-          <h3 class="skilltitle">RunOut-The cricket hangman game</h3>
-          <p>A lite fun android game based on the classic hangman concept.</p>
-          <p>
-            Link to the app: <em><a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.hangmancricket&hl=en_IN&gl=US">Tap here</a></em>
-          </p>
-          <hr class="redline">
-          <h3 class="skilltitle">Mauritius</h3>
-          <p>An app that lets you explore all the tourist attractions of Mauritius, and helps you decide where you want to go without any hassles.</p>
-          <p>
-            Link to the app: <em><a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.mauritius&hl=en_IN&gl=US">Tap here</a></em>
-          </p>
-          <hr class="redline">
-          <h3 class="skilltitle">Maaya</h3>
-          <p>Official Android app of "Maaya"-the annual intercollegiate techno-cultural festival hosted by PES Institute of Technology, Bangalore South Campus. Includes in-app quizzes.</p>
-          <p>
-            Link to the app: <em><a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.maaya&hl=en_IN&gl=US">Tap here</a></em>
-          </p>
-          <hr class="redline">
-          <h3 class="skilltitle">IPL Score Prediction</h3>
-          <p>Developed a machine-learning based model using Python to predict first inning score for the IPL. Using linear regression algorithm enabled the model to predict the score accurately. This project was used for a contest hosted by a local
-            pizzeria in Bengaluru.</p>
-          <hr class="redline">
-          <h3 class="skilltitle">Pick and place robot</h3>
-          <p>Programmed and fabricated a pick and place robot with Arduino Microcontroller using acrylic material to achieve greater strength-to-weight ratio.</p>
-
-        </div>
-
-        </div>
-    </section>
-
-    <hr class="line">
-
-    <section id="education">
-        <div class="education" data-anchor="projects">
-             <div>
-                <p class="sectionTitles">Education</p>
-             </div>
-
-            <div class="cards">
-                <div class="card">
-                    <img class='cardlogo' src="images/umdlogo.png" alt="Avatar" style="width:100%">
-
-                        <h4><b>University of Maryland</b></h4>
-                        <p class="placeYear">College Park, MD, US    |    2022-Present</p>
-                        <p class="degree">Master of Science</p>
-                        <p class="subject"><b>Information Systems</b></p>
-                        <p>GPA: 3.88/4.0</p>
-
-                </div>
-
-                <div class="card">
-                    <img class='cardlogo' src="images/pesLogo.png" alt="Avatar" style="width:100%">
-
-                        <h4><b>PES University</b></h4>
-                        <p class="placeYear">Bengaluru, India    |    2014-2018</p>
-                        <p class="degree">Bachelor of Engineering</p>
-                        <p class="subject"><b>Mechanical Engineering</b></p>
-                        <p>GPA: 3.7/4.0</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <hr class="line">
-    <section id="certification">
-        <div class="certification" data-anchor="projects">
-             <div>
-                <p class="sectionTitles">Certifications</p>
-             </div>
-
-            <div >
-                <img src="images/certificates.png" class="cert_image">
-            </div>
-        </div>
-    </section>
-
-        <hr class="line">
-
-    <section id="research">
-        <div class="research" data-anchor="projects">
-             <div>
-                <p class="sectionTitles">Research</p>
-             </div>
-             <a class="papertitle" href="https://www.ijsr.net/conf/RISE2017/IJSR36.pdf">Hydraulic Regenerative Braking System</a>
-             <p class="pubname">International Journal of Science and Research (IJSR) · May 1, 2017</p>
-             <p class="paperdesc">This project aims to create an improved model of a hydraulic regenerative braking system for vehicles. The system utilizes a reversible hydraulic unit that acts as a pump and motor as needed, converting mechanical energy to hydraulic energy during braking and vice versa during acceleration, thus recovering wasted energy. The use of this system leads to reduced power consumption and improved vehicle performance, a crucial solution in today's market with rising fuel prices and increasing environmental concerns.</p>
-                <hr class="smallline">
-
-            <a class="papertitle" href="https://www.technoarete.org/common_abstract/pdf/IJEREEE/v2/i10/21.pdf">Geothermal Energy in Secondary Pressure Drainers (A concept)</a>
-             <p class="pubname">International Journal of Engineering Research in Electrical and Electronic Engineering(IJEREEE) · Oct 1, 2016</p>
-             <p class="paperdesc">The paper discusses the design and implementation of a secondary pressure drainer for a geothermal power plant. The system uses geothermal energy from the earth's crust to convert cold water into high-pressure steam. The high-temperature steam is combined with low-pressure steam to produce medium-pressure steam that is used as the motive fluid. The design uses renewable sources of energy, providing a sustainable and reliable solution for electricity generation.
-</p>
-                <hr class="smallline">
-
-            <a class="papertitle" href="https://www.ijsr.net/conf/RISE2016/PES3.pdf">
-Economical and Effective Method for Design and Fabrication of Pick and Place Robot</a>
-             <p class="pubname">International Journal of Science and Research (IJSR) · Apr 30, 2016</p>
-             <p class="paperdesc">This project proposes an economical and effective design for a pick and place robot. The robot consists of components such as a base box, mechanical arms, servo motors, and an arduino microcontroller. The structure is built using acrylic sheets for light weight and stability. The gripper is equipped with a pressure sensor to prevent dropping and breaking, and the movement is powered by servo motors. The advantage of this design is its economical cost, light weight, portability, and repeatability.</p>
-                <hr class="smallline">
-
-            <a class="papertitle" href="http://www.ijirset.com/upload/2015/november/93_GowthamIFER.pdf">
-Elimination of brake fade in vehicles by altering the brake disc size(A Concept) </a>
-             <p class="pubname">International Journal of Innovative Research in Science, Engineering and Technology · Nov 1, 2015</p>
-             <p class="paperdesc">The paper focuses on the issue of brake fade, a reduction in stopping power caused by repeated or sustained application of brakes, and its consequences in high load or high speed conditions. To eliminate brake fade, it is necessary to keep the maximum temperature below the fade stop temperature. The paper analyzes the variables affecting the fade stop temperature and concludes that by minimizing the volume of the disc, the fade stop temperature is higher than the maximum temperature, thus making brake fade theoretically impossible. </p>
-                <hr class="smallline">
-
-            <a class="papertitle" href="http://www.ijirset.com/upload/2015/october/121_gautham%20research%20paper.pdf">Smart Security Systems</a>
-             <p class="pubname">International Journal of Innovative Research in Science, Engineering and Technology · Oct 1, 2015</p>
-             <p class="paperdesc">A security system that involves the use of a disguised signal sensor to detect and identify burglars through their communication device radiations. The recorded signals are transmitted to a telecommunication base, enabling law enforcement to restore safety and security. This system offers an inexpensive and effective solution with a wide range of private location applications and minimal malfunctions</p>
-                <hr class="smallline">
-
-            <a class="papertitle" href="http://www.ripublication.com/ijaer_spl/ijaerv10n48_26.pdf">Wind Sensing Windmill</a>
-             <p class="pubname">International Journal of Applied Engineering Research · Jun 1, 2015</p>
-             <p class="paperdesc">This paper presents a novel approach to increasing windmill efficiency through the use of pressure sensors and a microcontroller. By detecting wind speed and direction, the microcontroller aligns the windmill's nose cone for optimal energy generation.</p>
-                <hr class="smallline">
-        </div>
-    </section>
-
-
-</div>
-
- <div class="footer">
-<hr>
-        <div class="footer-elements">
-          <div class="contact-me">
-            <h2>Get In Touch</h2>
-            <h3>Use the buttons below to reach out to me!</h3>
-            <a class="btn" href="mailto:bhatmanas12@gmail.com">Contact me!</a>
           </div>
-
-
-
-        <div class="bottom-container">
-          <a href="https://in.linkedin.com/in/manasmbhat"><img class="contacticons" src="images/linkdimg.png" alt="HTML tutorial"></a>
-          <a href="https://instagram.com/manasmb"><img class="contacticons" src="images/insta.png" alt="HTML tutorial"></a>
-          <a href="https://www.facebook.com/manasmbhat"><img class="contacticons" src="images/facebook.png" alt="HTML tutorial"></a>
-          <p>© 2023 Manas M Bhat</p>
+          <ul class="tcard-bullets">
+            <li>Solve business problems with data — translating complex datasets into clear, actionable insights.</li>
+          </ul>
+          <div class="tcard-tags">
+            <span class="tag">Data Analysis</span><span class="tag">SQL</span><span class="tag">Python</span>
+          </div>
         </div>
-
-        </div>
-
       </div>
 
-
-
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tcard-header">
+            <img src="images/rhsmithlogo.jpg" alt="UMD" class="tcard-logo">
+            <div>
+              <h3 class="tcard-org">Robert H. Smith School of Business</h3>
+              <p class="tcard-meta">Teaching Assistant &nbsp;·&nbsp; College Park, MD &nbsp;·&nbsp; <span class="tcard-date">Jan 2023 – Dec 2024</span></p>
+            </div>
+          </div>
+          <ul class="tcard-bullets">
+            <li>Guided students through web development concepts using Flask and Python.</li>
+            <li>Assisted in feasibility analysis, system design, and project management for an industry capstone.</li>
+            <li>Graded assignments, provided constructive feedback, and enforced best practices.</li>
+          </ul>
+          <div class="tcard-tags">
+            <span class="tag">Flask</span><span class="tag">Python</span><span class="tag">Web Dev</span>
+          </div>
+        </div>
       </div>
 
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tcard-header">
+            <img src="images/accLogo.png" alt="Accenture" class="tcard-logo">
+            <div>
+              <h3 class="tcard-org">Accenture</h3>
+              <p class="tcard-meta">Data Analyst &nbsp;·&nbsp; Bengaluru, India &nbsp;·&nbsp; <span class="tcard-date">Nov 2018 – Jul 2022</span></p>
+            </div>
+          </div>
+          <ul class="tcard-bullets">
+            <li>Built a customer spending analytics tool covering <strong>12M+ customers</strong> using Python &amp; Oracle DB.</li>
+            <li>Mined SQL databases to surface insights that reduced <strong>$3.2M in revenue leakage</strong>.</li>
+            <li>Developed a Tableau dashboard for the Strategy &amp; Audit team, increasing marketing efficiency by <strong>28%</strong>.</li>
+            <li>Led monitoring of key financial metrics and coordinated the global launch of <strong>18 products</strong>.</li>
+            <li>Automated <strong>750+ SAP scenarios</strong>, cutting human effort by <strong>84%</strong>.</li>
+          </ul>
+          <div class="tcard-tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Oracle DB</span><span class="tag">Tableau</span><span class="tag">SAP</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tcard-header">
+            <img src="images/maubanklogo.jpg" alt="MauBank" class="tcard-logo">
+            <div>
+              <h3 class="tcard-org">MauBank</h3>
+              <p class="tcard-meta">IT Applications Intern &nbsp;·&nbsp; Ebene, Mauritius &nbsp;·&nbsp; <span class="tcard-date">Aug 2018 – Sep 2018</span></p>
+            </div>
+          </div>
+          <ul class="tcard-bullets">
+            <li>Analysed and visualised data to identify key profitable areas in collaboration with financial SMEs.</li>
+            <li>Ran A/B tests and prototypes to improve UX, boosting product efficiency by <strong>32%</strong>.</li>
+            <li>Built a Random Forest ML model with <strong>92% accuracy</strong> to predict Non-Performing Assets.</li>
+          </ul>
+          <div class="tcard-tags">
+            <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">A/B Testing</span>
+          </div>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────────────────── -->
+<section id="education" class="section">
+  <div class="container">
+    <p class="section-label">03. Education</p>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="edu-grid">
+
+      <div class="edu-card reveal">
+        <img src="images/umdlogo.png" alt="UMD" class="edu-logo">
+        <div class="edu-body">
+          <h3 class="edu-school">University of Maryland</h3>
+          <p class="edu-meta">College Park, MD &nbsp;·&nbsp; 2022 – Present</p>
+          <p class="edu-degree">Master of Science</p>
+          <p class="edu-field">Information Systems</p>
+          <div class="edu-gpa">
+            <span class="gpa-label">GPA</span>
+            <span class="gpa-val">3.88 / 4.0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card reveal">
+        <img src="images/pesLogo.png" alt="PES" class="edu-logo">
+        <div class="edu-body">
+          <h3 class="edu-school">PES University</h3>
+          <p class="edu-meta">Bengaluru, India &nbsp;·&nbsp; 2014 – 2018</p>
+          <p class="edu-degree">Bachelor of Engineering</p>
+          <p class="edu-field">Mechanical Engineering</p>
+          <div class="edu-gpa">
+            <span class="gpa-label">GPA</span>
+            <span class="gpa-val">3.7 / 4.0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────────────────────────── -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <p class="section-label">04. Projects</p>
+    <h2 class="section-title">Things I've Built</h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal featured">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.timetable3" target="_blank" title="Play Store"><i class="fab fa-google-play"></i></a>
+          </div>
+        </div>
+        <div class="project-stat-badge">10K+ Downloads</div>
+        <h3 class="project-title">The Mechanical App</h3>
+        <p class="project-desc">Android app helping Mechanical Engineering students access notes and manage their timetable. Adopted across multiple universities in Karnataka and surpassed 10,000 Play Store downloads.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span><span class="tag">Android</span><span class="tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.sayitwithout" target="_blank" title="Play Store"><i class="fab fa-google-play"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Say It Not</h3>
+        <p class="project-desc">Android party game where players describe a word without saying specific forbidden words. Fast-paced, fun, and great for groups.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span><span class="tag">Android</span><span class="tag">Game</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.hangmancricket" target="_blank" title="Play Store"><i class="fab fa-google-play"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">RunOut — Cricket Hangman</h3>
+        <p class="project-desc">A fun Android game built on the classic hangman concept with a cricket twist. Lightweight and addictive.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span><span class="tag">Android</span><span class="tag">Game</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.mauritius" target="_blank" title="Play Store"><i class="fab fa-google-play"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Mauritius Explorer</h3>
+        <p class="project-desc">Travel companion app letting users explore tourist attractions across Mauritius with curated recommendations and maps.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span><span class="tag">Android</span><span class="tag">Maps API</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.manas.manasmb.maaya" target="_blank" title="Play Store"><i class="fab fa-google-play"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Maaya Festival App</h3>
+        <p class="project-desc">Official Android app for Maaya — PES University's annual techno-cultural festival. Features event listings and in-app quizzes.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span><span class="tag">Android</span><span class="tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links"></div>
+        </div>
+        <h3 class="project-title">Maryland Traffic Violation Analysis</h3>
+        <p class="project-desc">Analysed 1.8M+ traffic violations recorded in Maryland (2012–2018) to surface patterns and help the local Police Department improve road safety.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">NumPy</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <i class="fa fa-folder-open project-icon"></i>
+          <div class="project-links"></div>
+        </div>
+        <h3 class="project-title">IPL Score Predictor</h3>
+        <p class="project-desc">ML model using linear regression to predict IPL first-innings scores. Deployed for a live contest at a local pizzeria in Bengaluru.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Linear Regression</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
+<section id="skills" class="section">
+  <div class="container">
+    <p class="section-label">05. Skills</p>
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="skills-wrapper">
+
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title">Languages</h4>
+        <div class="skill-icons">
+          <div class="skill-item"><i class="devicon-python-plain-wordmark"></i><span>Python</span></div>
+          <div class="skill-item"><i class="devicon-java-plain-wordmark"></i><span>Java</span></div>
+          <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+          <div class="skill-item"><i class="devicon-c-plain"></i><span>C</span></div>
+          <div class="skill-item"><i class="devicon-r-original"></i><span>R</span></div>
+          <div class="skill-item"><i class="devicon-html5-plain-wordmark"></i><span>HTML</span></div>
+          <div class="skill-item"><i class="devicon-css3-plain-wordmark"></i><span>CSS</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title">Frameworks &amp; Libraries</h4>
+        <div class="skill-icons">
+          <div class="skill-item"><i class="devicon-flask-plain-wordmark"></i><span>Flask</span></div>
+          <div class="skill-item"><i class="devicon-numpy-original-wordmark"></i><span>NumPy</span></div>
+          <div class="skill-item"><i class="devicon-pandas-original-wordmark"></i><span>Pandas</span></div>
+          <div class="skill-item"><i class="devicon-tensorflow-original-wordmark"></i><span>TensorFlow</span></div>
+          <div class="skill-item"><i class="devicon-android-plain-wordmark"></i><span>Android SDK</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title">Tools &amp; Platforms</h4>
+        <div class="skill-icons">
+          <div class="skill-item"><i class="devicon-androidstudio-plain-wordmark"></i><span>Android Studio</span></div>
+          <div class="skill-item"><i class="devicon-microsoftsqlserver-plain-wordmark"></i><span>SQL Server</span></div>
+          <div class="skill-item"><i class="devicon-firebase-plain-wordmark"></i><span>Firebase</span></div>
+          <div class="skill-item"><i class="devicon-github-original-wordmark"></i><span>GitHub</span></div>
+          <div class="skill-item"><i class="devicon-jupyter-plain-wordmark"></i><span>Jupyter</span></div>
+          <div class="skill-item"><i class="devicon-pycharm-plain-wordmark"></i><span>PyCharm</span></div>
+          <div class="skill-item"><i class="devicon-rstudio-plain"></i><span>RStudio</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH ───────────────────────────────────────────────────────── -->
+<section id="research" class="section section-alt">
+  <div class="container">
+    <p class="section-label">06. Publications</p>
+    <h2 class="section-title">Research</h2>
+    <div class="research-list">
+
+      <div class="research-item reveal">
+        <span class="research-num">01</span>
+        <div class="research-body">
+          <a href="https://www.ijsr.net/conf/RISE2017/IJSR36.pdf" target="_blank" class="research-title">Hydraulic Regenerative Braking System</a>
+          <p class="research-venue">International Journal of Science and Research (IJSR) &nbsp;·&nbsp; May 2017</p>
+          <p class="research-desc">Improved model of a hydraulic regenerative braking system converting mechanical energy to hydraulic energy during braking, reducing power consumption and improving vehicle performance.</p>
+        </div>
+      </div>
+
+      <div class="research-item reveal">
+        <span class="research-num">02</span>
+        <div class="research-body">
+          <a href="https://www.technoarete.org/common_abstract/pdf/IJEREEE/v2/i10/21.pdf" target="_blank" class="research-title">Geothermal Energy in Secondary Pressure Drainers (A Concept)</a>
+          <p class="research-venue">International Journal of Engineering Research in Electrical and Electronic Engineering &nbsp;·&nbsp; Oct 2016</p>
+          <p class="research-desc">Design and implementation of a secondary pressure drainer for a geothermal power plant using renewable energy sources for sustainable electricity generation.</p>
+        </div>
+      </div>
+
+      <div class="research-item reveal">
+        <span class="research-num">03</span>
+        <div class="research-body">
+          <a href="https://www.ijsr.net/conf/RISE2016/PES3.pdf" target="_blank" class="research-title">Economical Design and Fabrication of a Pick and Place Robot</a>
+          <p class="research-venue">International Journal of Science and Research (IJSR) &nbsp;·&nbsp; Apr 2016</p>
+          <p class="research-desc">Proposed an acrylic-frame pick-and-place robot with Arduino, servo motors and a pressure-sensor gripper — lightweight, portable and repeatable.</p>
+        </div>
+      </div>
+
+      <div class="research-item reveal">
+        <span class="research-num">04</span>
+        <div class="research-body">
+          <a href="http://www.ijirset.com/upload/2015/november/93_GowthamIFER.pdf" target="_blank" class="research-title">Elimination of Brake Fade by Altering Disc Size (A Concept)</a>
+          <p class="research-venue">International Journal of Innovative Research in Science, Engineering and Technology &nbsp;·&nbsp; Nov 2015</p>
+          <p class="research-desc">Analysed variables affecting fade stop temperature to show that minimising disc volume makes brake fade theoretically impossible.</p>
+        </div>
+      </div>
+
+      <div class="research-item reveal">
+        <span class="research-num">05</span>
+        <div class="research-body">
+          <a href="http://www.ijirset.com/upload/2015/october/121_gautham%20research%20paper.pdf" target="_blank" class="research-title">Smart Security Systems</a>
+          <p class="research-venue">International Journal of Innovative Research in Science, Engineering and Technology &nbsp;·&nbsp; Oct 2015</p>
+          <p class="research-desc">A disguised signal sensor that detects and identifies intruders through communication device radiation, relaying data to law enforcement.</p>
+        </div>
+      </div>
+
+      <div class="research-item reveal">
+        <span class="research-num">06</span>
+        <div class="research-body">
+          <a href="http://www.ripublication.com/ijaer_spl/ijaerv10n48_26.pdf" target="_blank" class="research-title">Wind Sensing Windmill</a>
+          <p class="research-venue">International Journal of Applied Engineering Research &nbsp;·&nbsp; Jun 2015</p>
+          <p class="research-desc">Novel approach using pressure sensors and a microcontroller to align a windmill's nose cone with wind direction for optimal energy generation.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────────────────── -->
+<section id="contact" class="section">
+  <div class="container contact-container reveal">
+    <p class="section-label">07. Say Hello</p>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="contact-text">
+      Whether it's a full-time role, a cool project, or just a chat about tech — feel free to reach out through any of the links below.
+    </p>
+    <div class="socials">
+      <a href="https://in.linkedin.com/in/manasmbhat" target="_blank" class="social-link" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/manasmb" target="_blank" class="social-link" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/manasmb" target="_blank" class="social-link" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/manasmbhat" target="_blank" class="social-link" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <p>Designed &amp; Built by <span class="accent">Manas M Bhat</span></p>
+  <p class="footer-sub">© 2024 · All rights reserved</p>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
