@@ -308,6 +308,16 @@ img { max-width: 100%; }
   transition: background 0.2s;
 }
 .stat-card:hover { background: rgba(99,102,241,0.05); }
+.stat-card-link {
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  border: 1px solid transparent;
+}
+.stat-card-link:hover {
+  background: rgba(99,102,241,0.08);
+  border-color: var(--border);
+  transform: translateY(-2px);
+}
 .stat-icon {
   width: 48px; height: 48px;
   border-radius: var(--radius-sm);
