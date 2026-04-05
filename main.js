@@ -74,6 +74,7 @@ function type() {
     typedEl.textContent = current.slice(0, cIdx--);
     if (cIdx < 0) {
       deleting = false;
+      cIdx = 0;
       rIdx = (rIdx + 1) % roles.length;
       setTimeout(type, 400);
       return;
