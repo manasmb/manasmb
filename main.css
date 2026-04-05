@@ -831,6 +831,10 @@ img { max-width: 100%; }
   font-size: 36px;
   color: var(--text-muted);
 }
+.skill-item .fa-snowflake {
+  font-size: 30px;
+  color: #29b5e8;
+}
 .skill-item span {
   font-size: 11px;
   color: var(--text-muted);
