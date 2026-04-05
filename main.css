@@ -388,6 +388,22 @@ img { max-width: 100%; }
   object-position: center top;
   display: block;
 }
+.avatar-role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.avatar-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.avatar-title {
+  font-size: 13px;
+  color: var(--accent-2);
+  font-family: 'JetBrains Mono', monospace;
+}
 .avatar-card {
   width: 100%;
   background: var(--bg-card);
